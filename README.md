@@ -48,14 +48,14 @@ from __future__ import print_function # the new line
 
 ### Usage
 
-Open 2 terminal tabs, and start the server:
+Open 2 terminal tabs. In one of them, start the server:
 ```
 $  python server.py &
 waiting for a connection...
 ```
 
-For example, we can request a bunch (100 by default) of encrypted and non-encrypted calculations, also instructing the 
-client and server to plot results:
+In the other tab, run the client. For example, to request a bunch (100 by default) of encrypted and non-encrypted calculations, also instructing the 
+client and server to plot results, run:
 ```
 $ python client.py --plot
 connecting to localhost port 10000
