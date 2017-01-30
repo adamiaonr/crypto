@@ -95,8 +95,10 @@ def print_graph(data):
             n = 0.0
 
             for k in ['encrypt', 'decrypt']:
-                if max(data[k]) > n:
-                    n = max(data['encrypt'])
+                # if max(data[k]) > n:
+                #     n = max(data['encrypt'])
+                if np.percentile(data[k], 0.90) > n:
+                    n = np.percentile(data[k], 0.90)
                     print('client::print_graph() : %f (%d)' % (n, int(math.log10(n))))
 
             log_n = int(math.log10(n))

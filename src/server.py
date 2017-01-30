@@ -154,8 +154,10 @@ def print_graph(data):
 
         n = 0.0
         for k in data[mode]:
-            if max(data[mode][k]) > n:
-                n = max(data[mode][k])
+            # if max(data[mode][k]) > n:
+            if np.percentile(data[mode][k], 0.90) > n:
+                # n = max(data[mode][k])
+                n = np.percentile(data[mode][k], 0.90)
                 print('server::print_graph() : %f (%d)' % (n, int(math.log10(n))))    
 
         log_n = int(math.log10(n))
