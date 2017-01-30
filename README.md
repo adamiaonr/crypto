@@ -41,10 +41,10 @@ SyntaxError: invalid syntax
 This seems to be caused by incompatible versions of `print`. To fix, I've 
 added the following line to **the top of the file**:
 
-``
+```
 #!/usr/bin/env python3
 from __future__ import print_function # the new line
-``
+```
 
 ### Usage
 
