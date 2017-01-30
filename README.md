@@ -54,9 +54,10 @@ $  python server.py &
 waiting for a connection...
 ```
 
-For example, first we can request a bunch (100 by default) of non-encrypted calculations:
+For example, we can request a bunch (100 by default) of encrypted and non-encrypted calculations, also instructing the 
+client and server to plot results:
 ```
-$ python client.py --mode unencrypted
+$ python client.py --plot
 connecting to localhost port 10000
 request : 39.825915 +* 86.260188 (= 126.086103)
 response_size : 2584 (/2584)
@@ -66,11 +67,7 @@ response_size : 2586 (/2586)
 (...)
 ```
 
-Then, we can request 100 encrypted calculations and order the plot of the 
-results:
-```
-$ python client.py --mode encrypted --plot yes
-```
+The client prints times of encryption and decription (see example [here](https://github.com/adamiaonr/encrypted-data-computing/blob/master/graphs/client-times.pdf)), the server prints execution times for each type of operation (example [here](https://github.com/adamiaonr/encrypted-data-computing/blob/master/graphs/exec-times.pdf)).
 
 ### Results
 
