@@ -6,11 +6,16 @@ import random
 import fcntl, os
 import errno
 import time
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+import math
 
 from collections import defaultdict
 from phe import paillier # for hpe operations
 from pprint import pprint 
 
+correctness = defaultdict()
 processing_times = defaultdict(list)
 
 # generate public and private key
@@ -72,6 +77,50 @@ def generate_random_request(mode = 'encrypted'):
     # return the unencrypted operands and message contents
     return operand_1, operand_2, expected_result, message
 
+def print_graph(data):
+
+    fig = plt.figure(figsize=(5, 4))
+
+    for mode in ['crypt-times', 'errors']:
+
+        # crypt-times refers to a boxplot of encryption times
+        if mode == 'crypt-times':
+
+            ax1 = fig.add_subplot(110 + 1)
+            ax1.set_title(mode)
+            ax1.yaxis.grid(True)
+
+            xtick_labels = ['encrypt', 'decrypt']
+
+            n = 0.0
+
+            for k in ['encrypt', 'decrypt']:
+                if max(data[k]) > n:
+                    n = max(data['encrypt'])
+                    print('client::print_graph() : %f (%d)' % (n, int(math.log10(n))))
+
+            log_n = int(math.log10(n))
+
+            for k in ['encrypt', 'decrypt']:
+                data[k] = [ (v / math.pow(10, log_n)) for v in data[k] ]
+
+            values = [
+                data['encrypt'], 
+                data['decrypt']
+            ]
+
+            ax1.boxplot(values, 0, '')
+
+            xticks = [1, 2]
+            ax1.set_xticks(xticks)
+            ax1.set_xticklabels(xtick_labels)
+            ax1.set_xticklabels(ax1.xaxis.get_majorticklabels(), rotation=45)
+            ax1.set_xlabel("Operations")
+            ax1.set_ylabel("Execution time ($10^{%s}$ sec)" % (log_n))
+
+    fig.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=0.3, hspace=None)
+    plt.savefig("../graphs/client-times.pdf", bbox_inches='tight', format = 'pdf')
+
 if __name__ == "__main__":
 
     # use an ArgumentParser for a nice CLI
@@ -79,17 +128,20 @@ if __name__ == "__main__":
 
     # options (self-explanatory)
     parser.add_argument(
-        "--mode", 
-         help = """'encrypted' or 'unencrypted'""")
+        "--plot", 
+         help = """plot graphs w/ results (on client and server)""",
+         action = "store_true")
 
     parser.add_argument(
-        "--plot", 
-         help = """plot a graph""")
+        "--nr-ops", 
+         help = """nr. of operations to request""")
 
     args = parser.parse_args()
 
-    if not args.mode:
-        args.mode = 'encrypted'
+    if not args.nr_ops:
+        nr_ops = 100
+    else:
+        nr_ops = int(args.nr_ops)
 
     # create a tpc/ip socket
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -103,89 +155,103 @@ if __name__ == "__main__":
     # fcntl.fcntl(sock, fcntl.F_SETFL, os.O_NONBLOCK)
 
     # run some requests on the server and time it
-    for i in xrange(100):
+    for mode in ['encrypted', 'unencrypted']:
 
-        try:
-            
-            # generate a random request
-            operand_1, operand_2, expected_result, body = generate_random_request(args.mode)
-            print('request : %f %s %f (= %f)' % (operand_1, body['operation'], operand_2, expected_result))
+        for i in xrange(nr_ops):
 
-            # send the message
-            body = json.dumps(body)
-            body_len = len(body)
-            sock.sendall(str(body_len) + '\r\n' + body)
+            try:
+                
+                # generate a random request
+                operand_1, operand_2, expected_result, body = generate_random_request(mode)
+                print('request : %f %s %f (= %f)' % (operand_1, body['operation'], operand_2, expected_result))
 
-            response = ''
-            response_size = 1
+                # send the message
+                body = json.dumps(body)
+                body_len = len(body)
+                sock.sendall(str(body_len) + '\r\n' + body)
 
-            while len(response) < response_size:
+                response = ''
+                response_size = 1
 
-                # keep buffering the response
-                response += sock.recv(4096)
+                while len(response) < response_size:
 
-                # extract the response size
-                if '\r\n' in response:
-                    response_size_str = response.split('\r\n', 1)[0]
-                    response_size = len(response_size_str) + 2 + int(response_size_str)
+                    # keep buffering the response
+                    response += sock.recv(4096)
+
+                    # extract the response size
+                    if '\r\n' in response:
+                        response_size_str = response.split('\r\n', 1)[0]
+                        response_size = len(response_size_str) + 2 + int(response_size_str)
+
+                    else:
+                        response_size = len(response) + 1
+
+                    print('response_size : %d (/%d)' % (response_size, len(response)))
+
+                response = json.loads(response.split('\r\n', 1)[1])
+
+                if mode == 'encrypted':
+
+                    encrypted_result = paillier.EncryptedNumber(public_key, 
+                                                                int(response['result'][0]), 
+                                                                int(response['result'][1]))
+
+                    start_time = time.time()
+                    result = private_key.decrypt(encrypted_result)
+                    processing_times['decrypt'].append(time.time() - start_time)
+
+                    print('response : %f %s %f = %f (%f)' % (operand_1, response['operation'], operand_2, result, expected_result))
 
                 else:
-                    response_size = len(response) + 1
 
-                print('response_size : %d (/%d)' % (response_size, len(response)))
+                    result = float(response['result'])
+                    print('response : %f %s %f = %f (%f)' % (operand_1, response['operation'], operand_2, result, expected_result))
 
-            response = json.loads(response.split('\r\n', 1)[1])
+                if result != expected_result:
 
-            if args.mode == 'encrypted':
+                    if 'wrong' not in correctness:
+                        correctness['wrong'] = [0, 0, 0, 0, 0, 0]
 
-                encrypted_result = paillier.EncryptedNumber(public_key, 
-                                                            int(response['result'][0]), 
-                                                            int(response['result'][1]))
+                    correctness['wrong'][operations.index(response['operation'])] += 1
 
-                start_time = time.time()
-                result = private_key.decrypt(encrypted_result)
-                processing_times['decrypt'].append(time.time() - start_time)
+                else:
 
-                print('response : %f %s %f = %f (%f)' % (operand_1, response['operation'], operand_2, result, expected_result))
+                    if 'correct' not in correctness:
+                        correctness['correct'] = [0, 0, 0, 0, 0, 0]
 
-            else:
+                    correctness['correct'][operations.index(response['operation'])] += 1
 
-                result = float(response['result'])
-                print('response : %f %s %f = %f (%f)' % (operand_1, response['operation'], operand_2, result, expected_result))
+            except socket.error, e:
 
-            if result != expected_result:
-                processing_times['wrong'].append(1)
-            else:
-                processing_times['correct'].append(1)
+                err = e.args[0]
 
+                if err == errno.EAGAIN or err == errno.EWOULDBLOCK:
+                    print 'no data available. carry on.'
+                    continue
 
-        except socket.error, e:
+                else:
+                    print('error occurred : %s. aborting.' % (e))
+                    sock.close()
+                    sys.exit(1)
 
-            err = e.args[0]
+    if mode == 'unencrypted' and args.plot:
 
-            if err == errno.EAGAIN or err == errno.EWOULDBLOCK:
-                print 'no data available. carry on.'
-                continue
-
-            else:
-                print('error occurred : %s. aborting.' % (e))
-                sock.close()
-                sys.exit(1)
-
-    if args.plot:
+        # print the client data
+        print_graph(processing_times)
 
         plot = {}
         plot['type'] = 'plot'
-        plot['mode'] = args.mode
+        plot['mode'] = mode
 
         body = json.dumps(plot)
         body_len = len(body)
         sock.sendall(str(body_len) + '\r\n' + body)
+
     else:
         # terminate the connection
         terminate = {}
         terminate['type'] = 'terminate'
-        terminate['mode'] = args.mode
+        terminate['mode'] = mode
 
         body = json.dumps(terminate)
         body_len = len(body)
