@@ -1,7 +1,7 @@
 # encrypted-data-computing
 Experiments with partially homomorphic encryption
 
-## Client/server example
+## Client & server example
 
 As a first step, i've implemented a simple client/server experiment. 
 A client requests the execution of *x* operations on a server, and checks the 
