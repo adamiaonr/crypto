@@ -4,6 +4,178 @@
 		"selected_items":
 		[
 			[
+				"pr",
+				"print"
+			],
+			[
+				"de",
+				"defaultdict"
+			],
+			[
+				"y_",
+				"y_new"
+			],
+			[
+				"po",
+				"poly"
+			],
+			[
+				"ra",
+				"random"
+			],
+			[
+				"ran",
+				"random"
+			],
+			[
+				"pl",
+				"plot"
+			],
+			[
+				"app",
+				"append"
+			],
+			[
+				"y",
+				"y_random"
+			],
+			[
+				"pol",
+				"poly_coeffs"
+			],
+			[
+				"gen",
+				"gen_random_seq"
+			],
+			[
+				"fin",
+				"finite_differences"
+			],
+			[
+				"diff",
+				"diffs"
+			],
+			[
+				"linea",
+				"linear_regression"
+			],
+			[
+				"seq",
+				"seq_index"
+			],
+			[
+				"ar",
+				"arange"
+			],
+			[
+				"pre",
+				"pred"
+			],
+			[
+				"se",
+				"seq_index"
+			],
+			[
+				"di",
+				"diffs"
+			],
+			[
+				"pred",
+				"predict_from"
+			],
+			[
+				"predi",
+				"predicted_seq"
+			],
+			[
+				"co",
+				"coeffs"
+			],
+			[
+				"dif",
+				"diffs"
+			],
+			[
+				"or",
+				"order"
+			],
+			[
+				"ti",
+				"timestamp"
+			],
+			[
+				"tim",
+				"timestamp"
+			],
+			[
+				"ge",
+				"gen_random_seq"
+			],
+			[
+				"inp",
+				"input_data"
+			],
+			[
+				"in",
+				"input_data"
+			],
+			[
+				"plo",
+				"polynomial"
+			],
+			[
+				"gra",
+				"print_graph"
+			],
+			[
+				"enc",
+				"encrypted"
+			],
+			[
+				"o",
+				"operations"
+			],
+			[
+				"op",
+				"operation"
+			],
+			[
+				"m",
+				"mode"
+			],
+			[
+				"def",
+				"defaultdict"
+			],
+			[
+				"cor",
+				"correctness"
+			],
+			[
+				"x",
+				"xtick_labels"
+			],
+			[
+				"cl",
+				"client"
+			],
+			[
+				"dec",
+				"decrypt"
+			],
+			[
+				"en",
+				"encrypt"
+			],
+			[
+				"cry",
+				"crypt-times"
+			],
+			[
+				"nr",
+				"nr_ops"
+			],
+			[
 				"ed",
 				"edge_id"
 			],
@@ -14,10 +186,6 @@
 			[
 				"id",
 				"id_str"
-			],
-			[
-				"po",
-				"pop_tail"
 			],
 			[
 				"re",
@@ -38,10 +206,6 @@
 			[
 				"rr",
 				"router"
-			],
-			[
-				"pr",
-				"print"
 			],
 			[
 				"isp",
@@ -104,16 +268,8 @@
 				"rocketfuel_file"
 			],
 			[
-				"ar",
-				"args"
-			],
-			[
 				"ta",
 				"table_sizes"
-			],
-			[
-				"de",
-				"delivery_probs"
 			],
 			[
 				"req",
@@ -180,10 +336,6 @@
 				"aggr_types"
 			],
 			[
-				"dif",
-				"diff_labels"
-			],
-			[
 				"agg",
 				"aggr_type"
 			],
@@ -240,16 +392,8 @@
 				"size"
 			],
 			[
-				"en",
-				"entry_lengths"
-			],
-			[
 				"su",
 				"sub_key"
-			],
-			[
-				"plo",
-				"plot_global_hierarchical"
 			],
 			[
 				"el",
@@ -370,171 +514,80 @@
 			[
 				"RD",
 				"RID_Router"
-			],
-			[
-				"new",
-				"new_router"
-			],
-			[
-				"tie",
-				"tier_index"
-			],
-			[
-				"acc",
-				"access_tree_height"
-			],
-			[
-				"f_d",
-				"f_dist"
-			],
-			[
-				"IFA",
-				"IFACE_LOCAL"
-			],
-			[
-				"IF",
-				"IFACE_LOCAL"
-			],
-			[
-				"ifa",
-				"iface_num"
-			],
-			[
-				"I",
-				"IFACE_LOCAL"
-			],
-			[
-				"flo",
-				"__float080"
-			],
-			[
-				"fwd",
-				"fwd_table"
-			],
-			[
-				"fw",
-				"fwd_table"
-			],
-			[
-				"_f",
-				"_f_entries"
-			],
-			[
-				"co",
-				"cout"
-			],
-			[
-				"OT",
-				"OUTCOME_FALLBACK_RELAY"
-			],
-			[
-				"set_",
-				"set_yticks"
-			],
-			[
-				"mm",
-				"mmh_mode"
-			],
-			[
-				"Fal",
-				"Fallback"
-			],
-			[
-				"on",
-				"on-path"
-			],
-			[
-				"subca",
-				"subcase"
-			],
-			[
-				"st",
-				"std"
-			],
-			[
-				"rou",
-				"router"
-			],
-			[
-				"PAT",
-				"PATH_TO_ORIGIN"
-			],
-			[
-				"ins",
-				"insert"
-			],
-			[
-				"PA",
-				"PATH_TO_ORIGIN_SIZE"
-			],
-			[
-				"probs",
-				"probs_sum"
-			],
-			[
-				"prob",
-				"probs_sum"
-			],
-			[
-				"font",
-				"fontsize"
-			],
-			[
-				"pro",
-				"probs_sum"
-			],
-			[
-				"path_b",
-				"path_probs"
-			],
-			[
-				"fall",
-				"fallback_carry_prob"
-			],
-			[
-				"bar",
-				"bar_group_width"
-			],
-			[
-				"ba",
-				"bar_group_num"
-			],
-			[
-				"x",
-				"x_max"
-			],
-			[
-				"k",
-				"key"
-			],
-			[
-				"entr",
-				"entry_size"
-			],
-			[
-				"cache",
-				"cache_location"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "",
-			"file": "src/example.py",
-			"file_size": -1,
-			"file_write_time": -1,
+			"file": "README.md",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 3005,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "README.md",
+			"file": "src/random/polynomial-fit.py",
 			"settings":
 			{
-				"buffer_size": 2706,
+				"buffer_size": 7046,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/random/entropy-estimation.py",
+			"settings":
+			{
+				"buffer_size": 1369,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/adamiaonr/workbench/rid-analytics/scripts/graphs/plot.py",
+			"settings":
+			{
+				"buffer_size": 79499,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/random/data.tsv",
+			"settings":
+			{
+				"buffer_size": 116,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/random/timings.tsv",
+			"settings":
+			{
+				"buffer_size": 45,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/adamiaonr/workbench/openstack-kolla/scripts/dependency-graph/rca.py",
+			"settings":
+			{
+				"buffer_size": 20533,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/adamiaonr/workbench/openstack-kolla/scripts/dependency-graph/rca_utils.py",
+			"settings":
+			{
+				"buffer_size": 48845,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/adamiaonr/workbench/openstack-kolla/scripts/dependency-graph/rca_plots.py",
+			"settings":
+			{
+				"buffer_size": 9055,
 				"line_ending": "Unix"
 			}
 		}
@@ -579,6 +632,15 @@
 	},
 	"file_history":
 	[
+		"/home/adamiaonr/workbench/openstack-kolla/scripts/dependency-graph/rca_utils.py",
+		"/home/adamiaonr/workbench/encrypted-data-computing/src/paillier/client.py",
+		"/home/adamiaonr/workbench/encrypted-data-computing/src/paillier/server.py",
+		"/home/adamiaonr/workbench/leonardo/leonardo.py",
+		"/home/adamiaonr/workbench/rid-analytics/scripts/graphs/plot.py",
+		"/home/adamiaonr/workbench/encrypted-data-computing/src/server.py",
+		"/home/adamiaonr/workbench/encrypted-data-computing/src/client.py",
+		"/home/adamiaonr/workbench/encrypted-data-computing/src/auxiliary/curve-fitting.py",
+		"/home/adamiaonr/workbench/encrypted-data-computing/src/example.py",
 		"/home/adamiaonr/workbench/openstack-kolla/scripts/dependency-graph/graph_utils.py",
 		"/home/adamiaonr/workbench/openstack-kolla/scripts/dependency-graph/metric_str_utils.py",
 		"/home/adamiaonr/workbench/openstack-kolla/scripts/dependency-graph/dependency_graph.py",
@@ -697,16 +759,7 @@
 		"/home/adamiaonr/workbench/rid-analytics/scripts/plot-prefix-management.py",
 		"/home/adamiaonr/Downloads/output.out",
 		"/home/adamiaonr/workbench/rid-analytics/test/configs/evaluation/r15-events/f1.scn",
-		"/home/adamiaonr/workbench/rid-analytics/test/configs/example/example.scn",
-		"/home/adamiaonr/workbench/rid-analytics/test/configs/fdist/15.fdist",
-		"/home/adamiaonr/Downloads/cli",
-		"/home/adamiaonr/workbench/rid-analytics/example.scn",
-		"/home/adamiaonr/workbench/rid-analytics/test/configs/example/data/events.1475591776.tsv",
-		"/home/adamiaonr/workbench/rid-analytics/include/dataparser.h",
-		"/home/adamiaonr/workbench/rid-analytics/src/dataparser.cpp",
-		"/home/adamiaonr/workbench/rid-analytics/example.xml",
-		"/home/adamiaonr/workbench/rid-analytics/example.nw",
-		"/home/adamiaonr/workbench/rid-testapp/Makefile"
+		"/home/adamiaonr/workbench/rid-analytics/test/configs/example/example.scn"
 	],
 	"find":
 	{
@@ -726,6 +779,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"x_powers",
+			"poly_ordr",
+			"range",
+			"max",
+			"args.mode",
+			"processing_times",
 			"723",
 			"path",
 			"Directed",
@@ -847,13 +906,7 @@
 			"get_valid_ifaces(",
 			"ptree_iface",
 			"calc_lpm",
-			"calc_joint_log_prob",
-			"ingress_ptree_prob",
-			"ingress_p",
-			"ingress_ptree_prob",
-			"calc_joint_lpm_pmf",
-			"id=\"1.1",
-			"egress_ptree_prob_sum"
+			"calc_joint_log_prob"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -861,6 +914,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"powers_x",
+			"poly_order",
 			"rocketfuel_path",
 			"TARGET",
 			":10",
@@ -986,9 +1041,7 @@
 			"_log_prob_not_fp[_f]",
 			"tp_sizes[_iface]",
 			"local",
-			"RID_Router::calc_lpm_pmf()",
-			"prefix",
-			"get_joint_lpm_prob"
+			"RID_Router::calc_lpm_pmf()"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -1004,44 +1057,18 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/example.py",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "README.md",
 					"settings":
 					{
-						"buffer_size": 2706,
+						"buffer_size": 3005,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1437,
-								1437
+								747,
+								747
 							]
 						],
 						"settings":
@@ -1055,7 +1082,231 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 360.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/random/polynomial-fit.py",
+					"settings":
+					{
+						"buffer_size": 7046,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4489,
+								4489
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+								80
+							],
+							"spell_check": true,
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2340.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/random/entropy-estimation.py",
+					"settings":
+					{
+						"buffer_size": 1369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								190,
+								190
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/adamiaonr/workbench/rid-analytics/scripts/graphs/plot.py",
+					"settings":
+					{
+						"buffer_size": 79499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5444,
+								5444
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1845.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/random/data.tsv",
+					"settings":
+					{
+						"buffer_size": 116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								116,
+								116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/random/timings.tsv",
+					"settings":
+					{
+						"buffer_size": 45,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/adamiaonr/workbench/openstack-kolla/scripts/dependency-graph/rca.py",
+					"settings":
+					{
+						"buffer_size": 20533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16183,
+								16183
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6270.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/adamiaonr/workbench/openstack-kolla/scripts/dependency-graph/rca_utils.py",
+					"settings":
+					{
+						"buffer_size": 48845,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4254,
+								4254
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1470.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/adamiaonr/workbench/openstack-kolla/scripts/dependency-graph/rca_plots.py",
+					"settings":
+					{
+						"buffer_size": 9055,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5772,
+								5772
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2160.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
