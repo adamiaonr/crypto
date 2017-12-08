@@ -16,4 +16,4 @@ by Gerald Nash:
 
 ## references
 
-[1] Ale [](https://keepingstock.net/explaining-blockchain-how-proof-of-work-enables-trustless-consensus-2abed27f0845)
+[1] Aleksandr Bulkin [Explaining Blockchain: How Proof-of-Work Enables Trustless Consensus](https://keepingstock.net/explaining-blockchain-how-proof-of-work-enables-trustless-consensus-2abed27f0845)
