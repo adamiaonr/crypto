@@ -1,5 +1,5 @@
-# encrypted-data-computing
-Experiments with partially homomorphic encryption
+# phe
+Experiments with [Partially Homomorphic Encryption](https://security.stackexchange.com/questions/3728/in-what-ways-does-full-or-partial-homomorphic-encryption-benefit-the-cloud)
 
 ## Client & server example
 
@@ -71,8 +71,7 @@ The client prints times of encryption and decription (see example [here](https:/
 
 ### Results
 
-**TL;DR:** as seen [here](https://github.com/adamiaonr/encrypted-data-computing/blob/master/graphs/exec-times.pdf), 
-'encrypted' execution times are longer by ~4 orders of magnitude (in other 
+**TL;DR:** 'encrypted' execution times are longer by ~4 orders of magnitude (in other 
 words, *tremendously* longer...). this is consistent with mentions in the 
 related work of [BlindBox](http://iot.stanford.edu/pubs/sherry-blindbox-sigcomm15.pdf) 
 or [Embark](http://www.justinesherry.com/assets/papers/embark.pdf).
